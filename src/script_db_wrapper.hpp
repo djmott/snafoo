@@ -1,0 +1,8 @@
+//
+// Created by davidmott on 7/20/17.
+//
+
+#ifndef SNAFOO_SCRIPTDBWRAPPER_HPP
+#define SNAFOO_SCRIPTDBWRAPPER_HPP
+
+#endif //SNAFOO_SCRIPTDBWRAPPER_HPP

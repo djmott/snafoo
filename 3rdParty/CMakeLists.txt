@@ -51,8 +51,6 @@ ExternalProject_Add(CppSQLite3
   GIT_PROGRESS 0
   )
 
-set(CPPSQLITE3_BIN_DIR "${CMAKE_CURRENT_SOURCE_DIR}/CppSQLite3" PARENT_SCOPE)
-
 ExternalProject_ADD(AngelScript
   SVN_REPOSITORY http://svn.code.sf.net/p/angelscript/code/trunk
   SVN_TRUST_CERT 1
@@ -72,3 +70,20 @@ ExternalProject_ADD(AngelScript
   )
 
 set(ANGELSCRIPT_BIN_DIR "${CMAKE_CURRENT_BINARY_DIR}/AngelScript/bin" PARENT_SCOPE)
+
+ExternalProject_ADD(JITCompiler
+  DEPENDS AngelScript
+  GIT_REPOSITORY https://github.com/BlindMindStudios/AngelScript-JIT-Compiler.git
+  SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/JITCompiler
+  PREFIX ${CMAKE_CURRENT_BINARY_DIR}/JITCompiler/prefix
+  BINARY_DIR ${CMAKE_CURRENT_BINARY_DIR}/JITCompiler/bin
+  STAMP_DIR ${CMAKE_CURRENT_BINARY_DIR}/JITCompiler/stamp
+  TMP_DIR ${CMAKE_CURRENT_BINARY_DIR}/JITCompiler/tmp
+  INSTALL_DIR ${CMAKE_CURRENT_BINARY_DIR}/JITCompiler/install
+  CONFIGURE_COMMAND ""
+  BUILD_COMMAND ""
+  INSTALL_COMMAND ""
+  GIT_PROGRESS 0
+  )
+
+set(JITCOMPILER_SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}/JITCompiler" PARENT_SCOPE)

@@ -44,13 +44,10 @@ CTestTestfile.cmake
 *.app
 .build/
 .idea/
-3rdParty/angelscript/
-3rdParty/cppsqlite3/
-3rdParty/sqlite/
-3rdParty/xtl/
 
-/3rdParty/AngelScript/
-/3rdParty/CppSQLite3/
-/3rdParty/SQLite/
-/3rdParty/XTL/
+/3rdParty/AngelScript
+/3rdParty/CppSQLite3
+/3rdParty/SQLite
+/3rdParty/XTL
+/3rdParty/JITCompiler
 /.build/
